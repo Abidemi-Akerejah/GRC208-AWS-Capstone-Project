@@ -6,38 +6,80 @@ The AWS Integrated GRC Platform is a comprehensive Governance, Risk, and Complia
 
 ---
 
-## Before You Begin — Setting Up Your AWS Account
+## Before You Begin — AWS Account Setup & Free Credits
 
-> **Important:** Every student must have an active AWS account before starting this project. Follow the steps below to get started for FREE.
+> **Important:** Every student must have access to an AWS environment before starting this project. You have **four options** to choose from — all of them free. Read through each option and select the one that best suits your situation.
 
-### Step 1: Create a Free AWS Account
+---
 
-Go to [https://aws.amazon.com/free](https://aws.amazon.com/free) and click **Create a Free Account**. You will need:
+### Option A: AWS Academy Learner Lab (RECOMMENDED — Our Institution is an AWS Academy Member)
 
-- A valid email address
-- A phone number for verification
-- A credit or debit card (for identity verification only — you will NOT be charged if you stay within Free Tier limits)
+The **International Cybersecurity and Digital Forensics Academy (ICDFA)** is an official **AWS Academy member institution**. This means you have direct access to a fully provisioned AWS Learner Lab environment at no cost.
 
-Once registered, you automatically receive **12 months of AWS Free Tier** access, which covers everything needed for this project at **zero cost**.
+**How to Access the AWS Academy Learner Lab:**
 
-### Step 2: Claim Your Free Student Credits
+1. Contact your instructor **Aminu Idris** to request access to the GRC208 AWS Academy course
+2. You will receive an email invitation to join the AWS Academy portal
+3. Accept the invitation and log in at [awsacademy.instructure.com](https://awsacademy.instructure.com)
+4. Navigate to your enrolled course and click **Learner Lab**
+5. Click **Start Lab** — your personal AWS environment will launch within 60 seconds
+6. Click **AWS** (the green indicator) to open the AWS Console directly — no account creation needed
 
-AWS offers multiple free credit programmes for students. Choose the one that applies to you:
+**What the Learner Lab Gives You:**
 
-| Programme | Credits | How to Apply | Best For |
-|-----------|---------|--------------|----------|
-| **AWS Educate** | Free sandbox + labs | [aws.amazon.com/education/awseducate](https://aws.amazon.com/education/awseducate) | All students (no credit card needed) |
-| **AWS Academy** | $50–$100 credits | Ask your instructor if your institution is enrolled | Students at AWS Academy member schools |
-| **AWS Free Tier** | 12 months free | Automatic on new account creation | All new AWS accounts |
-| **AWS Activate** | Up to $1,000 credits | [aws.amazon.com/activate](https://aws.amazon.com/activate) | Students building startup/portfolio projects |
+| Benefit | Detail |
+|---------|--------|
+| **AWS Credits** | $50–$100 per student, pre-loaded |
+| **Session Duration** | Up to 4 hours per session (restart anytime) |
+| **Services Available** | All services needed for this project |
+| **No Credit Card** | Zero personal billing — fully managed |
+| **Pre-configured IAM** | Lab roles already set up for you |
+| **Data Persistence** | Resources persist between sessions |
 
-> **Recommended:** Sign up for both **AWS Educate** AND create a **Free Tier account**. Together, they give you more than enough resources to complete this entire capstone project.
+> **This is the easiest and safest option.** Your environment is isolated, pre-configured, and your instructor can monitor your progress. Contact Aminu Idris to get your invitation link.
 
-### Step 3: What the Free Tier Covers for This Project
+---
 
-This entire capstone project runs comfortably within the AWS Free Tier limits. The table below shows the estimated usage versus what is free:
+### Option B: AWS Educate (Free — No Credit Card Required)
 
-| AWS Service | Free Tier Allowance | Estimated Project Usage | Cost |
+AWS Educate is open to all students worldwide and requires no credit card.
+
+**How to Sign Up:**
+
+1. Go to [aws.amazon.com/education/awseducate](https://aws.amazon.com/education/awseducate)
+2. Click **Join AWS Educate**
+3. Select **Student** and fill in your details using your **institutional email address**
+4. Verify your email and wait for approval (usually within 24 hours)
+5. Once approved, access the **AWS Builder Labs** sandbox environment
+
+**What AWS Educate Gives You:**
+
+| Benefit | Detail |
+|---------|--------|
+| **Cost** | Completely free |
+| **Credit Card** | Not required |
+| **Sandbox Labs** | Pre-built lab environments |
+| **Learning Content** | Free courses, badges, and certifications |
+| **AWS Console Access** | Yes, through the sandbox |
+
+---
+
+### Option C: AWS Free Tier Personal Account (12 Months Free)
+
+If you prefer your own personal AWS account, create one and use the 12-month Free Tier.
+
+**How to Create Your Account:**
+
+1. Go to [aws.amazon.com/free](https://aws.amazon.com/free) and click **Create a Free Account**
+2. Enter your email address and choose an AWS account name
+3. Provide a phone number for identity verification
+4. Enter a credit or debit card — **you will NOT be charged** if you stay within Free Tier limits
+5. Complete the identity verification and select the **Basic Support (Free)** plan
+6. Log in to the [AWS Console](https://console.aws.amazon.com)
+
+**Free Tier Coverage for This Project:**
+
+| AWS Service | Free Tier Allowance | Project Usage | Cost |
 |-------------|--------------------|-----------------------|------|
 | Amazon RDS MySQL | 750 hours/month | ~100 hours | **FREE** |
 | AWS Lambda | 1,000,000 requests/month | ~10,000 requests | **FREE** |
@@ -45,12 +87,40 @@ This entire capstone project runs comfortably within the AWS Free Tier limits. T
 | Amazon DynamoDB | 25 GB + 25 WCU/RCU | Minimal | **FREE** |
 | AWS CloudTrail | First trail free | 1 trail | **FREE** |
 | Amazon CloudWatch | 10 custom metrics | Basic metrics | **FREE** |
-| AWS Config | 1–2 rules | ~5 rules ($0.003/rule) | **~$0.01** |
+| AWS Config | ~5 rules | $0.003/rule/month | **~$0.02** |
 | **Total Estimated Cost** | | | **$0 – $5/month** |
 
-### Step 4: Set a Billing Alert (Mandatory)
+> **Mandatory:** After creating your account, set up a **$10 billing alert** immediately (see Step 4 below).
 
-Before deploying anything, set up a billing alert to avoid unexpected charges:
+---
+
+### Option D: AWS Activate (Up to $1,000 in Credits)
+
+If you are building this project as part of a startup, portfolio, or independent study, you may qualify for AWS Activate credits.
+
+**How to Apply:**
+
+1. Go to [aws.amazon.com/activate](https://aws.amazon.com/activate)
+2. Click **Apply Now** under the **Founders** tier
+3. Complete the application with your project details
+4. Credits are typically approved within 1–2 weeks
+
+---
+
+### Which Option Should You Choose?
+
+| Your Situation | Recommended Option |
+|----------------|-------------------|
+| You are a GRC208 student at ICDFA | **Option A — AWS Academy Learner Lab** |
+| You want free access with no credit card | **Option B — AWS Educate** |
+| You want your own personal AWS account | **Option C — AWS Free Tier** |
+| You are building an independent project | **Option D — AWS Activate** |
+
+---
+
+### Step 4: Set a Billing Alert (Mandatory for Options C and D)
+
+If you are using a personal AWS account, set up a billing alert before deploying anything:
 
 1. Log in to the [AWS Console](https://console.aws.amazon.com)
 2. Go to **Billing Dashboard** > **Budgets** > **Create Budget**
@@ -58,18 +128,18 @@ Before deploying anything, set up a billing alert to avoid unexpected charges:
 4. Add your email address to receive alerts
 5. Click **Create Budget**
 
-This ensures you will be notified immediately if costs ever approach $10, giving you time to review and clean up resources.
+This ensures you are notified immediately if costs approach $10, giving you time to review and clean up resources.
 
-### Step 5: Enable MFA on Your Root Account
+### Step 5: Enable MFA on Your Account (All Options)
 
-This is a security best practice and a GRC requirement:
+Enabling Multi-Factor Authentication (MFA) is a **GRC requirement** for this project and a real-world security best practice:
 
 1. Go to **IAM** > **Security credentials** in the AWS Console
 2. Under **Multi-factor authentication (MFA)**, click **Assign MFA device**
-3. Use an authenticator app (Google Authenticator or Authy)
+3. Use an authenticator app such as Google Authenticator or Authy
 4. Follow the on-screen steps to complete setup
 
-> **Never use your root account for day-to-day work.** Create an IAM user with admin permissions for all project activities.
+> **Never use your root account for day-to-day work.** Always create a dedicated IAM user with the minimum permissions required.
 
 ---
 
