@@ -10,6 +10,8 @@ The AWS Integrated GRC Platform is a comprehensive Governance, Risk, and Complia
 
 > **Important:** Every student must have access to an AWS environment before starting this project. You have **four options** to choose from — all of them free. Read through each option and select the one that best suits your situation.
 
+![AWS Access Options](diagrams/07_aws_access_options.png)
+
 ---
 
 ### Option A: AWS Academy Learner Lab (RECOMMENDED — Our Institution is an AWS Academy Member)
