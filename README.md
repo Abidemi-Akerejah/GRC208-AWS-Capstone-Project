@@ -344,12 +344,29 @@ This project incorporates best practices from:
   - Risk assessment
   - Audit logging
 
+## Author
+
+Designed, Developed and Maintained by:
+
+**Aminu Idris**
+AMCPN Founder | International Cybersecurity and Digital Forensics Academy (ICDFA)
+
+| Credential | Detail |
+|------------|--------|
+| **Certifications** | CCNA, CompTIA Security+, CEH, OSCP, CISSP, AWS Security Specialist |
+| **Role** | Cybersecurity Educator & Mentor |
+| **Organisation** | International Cybersecurity and Digital Forensics Academy (ICDFA) |
+| **Title** | AMCPN Founder |
+
+> *"Empowering the next generation of cybersecurity and GRC professionals through practical, hands-on education."*
+
 ## Contact
 
-For questions about this capstone project, contact your GRC208 instructor.
+For questions about this capstone project, reach out through the International Cybersecurity and Digital Forensics Academy (ICDFA).
 
 ---
 
 **Last Updated**: March 2026
 **Status**: Production Ready
 **Maintenance**: Actively Maintained
+**Maintained by**: Aminu Idris — ICDFA
