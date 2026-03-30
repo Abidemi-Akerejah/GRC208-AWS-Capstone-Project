@@ -38,17 +38,26 @@
 ## The Problem: GRC is Complex
 
 🔴 Compliance requirements are extensive:
+
 • ISO 27001, NIST CSF, SOC 2, PCI DSS, HIPAA, GDPR
 
 🔴 Manual compliance checks are:
+
 • Time-consuming
+
 • Error-prone
+
 • Hard to audit
 
+
 🔴 Organizations need:
+
 • Automated monitoring
+
 • Audit trails
+
 • Scalable, secure infrastructure
+
 
 ## My Solution:
 Leverage AWS native services to build an automated, auditable GRC platform.
@@ -76,10 +85,15 @@ Application Load Balancer → Lambda (grc-compliance-monitor)
               
 
 ### Key Design Principles:
+
 • Security: Private subnets for database
+
 • Scalability: Serverless Lambda functions
+
 • Auditability: CloudTrail logs all API calls
+
 • Automation: EventBridge triggers hourly checks
+
 
 ## Services & What I Did
 
