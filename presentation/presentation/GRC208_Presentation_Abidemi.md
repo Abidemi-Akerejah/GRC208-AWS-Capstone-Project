@@ -45,21 +45,25 @@ Leverage AWS native services to build an automated, auditable GRC platform.
 
 ## System Architecture
 
-[Insert simple diagram or describe:]
-
 Internet
    ↓
 [Public Subnet]
+
    ↓
 Application Load Balancer → Lambda (grc-compliance-monitor)
+
                               ↓
                     [Private Subnet]
+                    
                               ↓
                     RDS MySQL (grc-capstone-db)
+                    
                               ↓
                     S3 Buckets (evidence, reports, logs)
+                    
                               ↓
               CloudWatch + CloudTrail + EventBridge
+              
 
 ### Key Design Principles:
 • Security: Private subnets for database
