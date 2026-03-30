@@ -10,7 +10,7 @@
 
  Repository: https://github.com/Abidemi-Akerejah/GRC208-AWS-Capstone-Project
 
- ## What I Built
+ ## Deployment
 
  A cloud-based GRC (Governance, Risk, Compliance) platform on AWS
 
@@ -35,7 +35,7 @@
 • Configuration documented in .env file
 
 
-## The Problem: GRC is Complex
+## The Challenge: Complexity in Governance, Risk, and Compliance
 
 🔴 Compliance requirements are extensive:
 
@@ -59,7 +59,7 @@
 • Scalable, secure infrastructure
 
 
-## My Solution:
+## Solution:
 Leverage AWS native services to build an automated, auditable GRC platform.
 
 ## System Architecture
@@ -95,9 +95,9 @@ Application Load Balancer → Lambda (grc-compliance-monitor)
 • Automation: EventBridge triggers hourly checks
 
 
-## Services & What I Did
+## Services and Contributions
 
-| Service | My Configuration | Purpose |
+| Service | Configuration | Purpose |
 |---------|-----------------|---------|
 | **CloudWatch** | 2 alarms created | Monitor Lambda errors, RDS CPU |
 | **CloudTrail** | grc-trail enabled | Audit all AWS API calls |
