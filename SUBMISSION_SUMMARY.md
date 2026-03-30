@@ -38,8 +38,3 @@
 - [x] CloudWatch alarms active
 - [x] EventBridge rule enabled
 
----
-
-## 📋 CLI Evidence (Observed During Lab)
-
-### Test Results
