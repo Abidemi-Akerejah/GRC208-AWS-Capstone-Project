@@ -29,8 +29,11 @@
 
 ### Validation:
 • 22/22 automated tests PASSED 
+
 • All infrastructure verified via AWS CLI
+
 • Configuration documented in .env file
+
 
 ## The Problem: GRC is Complex
 
