@@ -4,8 +4,9 @@
 **Student**: Abidemi Zainab Akerejah  
 **Student ID**: GRC25/10323  
 **Instructor**: Aminu Idris  
-**Date**: 2/04/2026  
-**AWS Account**: 211125455591 | **Region**: us-east-1
+**Date**: 02/04/2026  
+**AWS Account**: 211125455591 | 
+**Region**: us-east-1
 
  Repository: https://github.com/Abidemi-Akerejah/GRC208-AWS-Capstone-Project
 
