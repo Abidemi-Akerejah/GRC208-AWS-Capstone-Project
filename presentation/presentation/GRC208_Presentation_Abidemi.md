@@ -109,7 +109,7 @@ Application Load Balancer → Lambda (grc-compliance-monitor)
 
 ### All verified via AWS CLI commands 
 
-## Key Commands I Executed
+## Key Commands Executed
 
 ```bash
 # 1. Verify infrastructure stacks
@@ -134,8 +134,7 @@ python3 test_cases.py
 
 ---
 
-### Test Results - My Biggest Achievement
-```markdown
+### Test Results - 
 ## Validation: 22/22 Tests PASSED ✅
 
 
@@ -234,10 +233,9 @@ python3 test_cases.py                   # 22/22 PASSED
 
 ---
 
-### Key Takeaways & Thank You
-## Key Takeaways
+### Key Takeaways 
 
-I successfully:
+Successfully:
 • Configured monitoring, logging, and automation for GRC workloads  
 • Validated deployment with 22/22 passing tests  
 • Documented infrastructure limitations professionally  
