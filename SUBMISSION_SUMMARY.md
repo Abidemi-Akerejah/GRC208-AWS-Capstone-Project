@@ -1,6 +1,5 @@
 # GRC208 AWS Capstone - Student Submission
 
-## Student Information
 - **Name**: Abidemi Zainab Akerejah
 - **Student ID**: GRC25/10323
 - **Course**: GRC208 - Governance, Risk, and Compliance Capstone
