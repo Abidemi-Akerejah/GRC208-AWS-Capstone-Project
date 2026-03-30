@@ -3,7 +3,7 @@
 
 **Student**: Abidemi Zainab Akerejah  
 **Student ID**: GRC25/10323  
-**Instructor**: Aminu Idris  
+**Instructor**: Aminu Idris ,AMPN, CCNA, CompTIA Security+, CEH, OSCP, CISSP  
 **Date**: 02/04/2026  
 **AWS Account**: 211125455591 | 
 **Region**: us-east-1
@@ -65,8 +65,10 @@ Leverage AWS native services to build an automated, auditable GRC platform.
 ## System Architecture
 
 Internet
+
    ↓
 [Public Subnet]
+
 
    ↓
 Application Load Balancer → Lambda (grc-compliance-monitor)
