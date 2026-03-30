@@ -3,8 +3,8 @@
 - **Name**: Abidemi Zainab Akerejah
 - **Student ID**: GRC25/10323
 - **Course**: GRC208 - Governance, Risk, and Compliance Capstone
-- **Instructor**: Aminu Idris
-- **Submission Date**: 2/04/2026
+- **Instructor**: Aminu Idris ,AMPN, CCNA, CompTIA Security+, CEH, OSCP, CISSP
+- **Submission Date**: 02/04/2026
 - **AWS Account ID**: 211125455591
 - **Region**: us-east-1
 - **Environment**: AWS Academy Learner Lab
