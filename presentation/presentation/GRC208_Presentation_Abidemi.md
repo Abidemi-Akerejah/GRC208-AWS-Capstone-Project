@@ -14,11 +14,17 @@
  A cloud-based GRC (Governance, Risk, Compliance) platform on AWS
 
 ### Core Components:
+
 • Infrastructure: VPC, RDS MySQL, S3 buckets, Lambda functions
+
 • Monitoring: CloudWatch alarms for Lambda & RDS
+
 • Audit: CloudTrail logging to S3
+
 • Automation: EventBridge scheduled compliance checks
+
 • Backup: RDS manual snapshot for disaster recovery
+
 
 ### Validation:
 • 22/22 automated tests PASSED 
