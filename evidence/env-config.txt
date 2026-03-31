@@ -1,0 +1,14 @@
+# GRC208 Capstone - Environment Configuration
+AWS_REGION=us-east-1
+AWS_ACCOUNT_ID=768499314195
+DB_HOST=grc-capstone-db.cc5w8ia2urid.us-east-1.rds.amazonaws.com
+DB_PORT=3306
+DB_NAME=grcdb
+DB_USER=grcadmin
+DB_PASSWORD=MyPassword123
+EVIDENCE_BUCKET=grc-capstone-evidence-bucket-768499314195
+COMPLIANCE_REPORTS_BUCKET=grc-capstone-compliance-reports-768499314195
+LAMBDA_FUNCTION_NAME=grc-compliance-monitor
+LAMBDA_ROLE_ARN=arn:aws:iam::768499314195:role/grc-lambda-execution-role
+NETWORK_STACK=grc-capstone-network-stack
+DATABASE_STACK=grc-capstone-database-stack

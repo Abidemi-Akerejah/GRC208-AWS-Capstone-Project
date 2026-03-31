@@ -1,0 +1,49 @@
+test_compliance_percentage_calculation (__main__.TestComplianceMonitoring)
+Test compliance percentage calculation ... ok
+test_compliance_report_generation (__main__.TestComplianceMonitoring)
+Test compliance report generation ... ok
+test_non_compliant_rules_detection (__main__.TestComplianceMonitoring)
+Test detection of non-compliant rules ... ok
+test_risk_level_classification (__main__.TestRiskAssessment)
+Test risk level classification based on compliance ... ok
+test_risk_matrix_values (__main__.TestRiskAssessment)
+Test risk matrix scoring values ... ok
+test_risk_score_calculation (__main__.TestRiskAssessment)
+Test risk score calculation ... ok
+test_asset_classification_validation (__main__.TestDataValidation)
+Test asset classification validation ... ok
+test_control_id_format_validation (__main__.TestDataValidation)
+Test control ID format validation ... ok
+test_criticality_level_validation (__main__.TestDataValidation)
+Test criticality level validation ... ok
+test_risk_status_validation (__main__.TestDataValidation)
+Test risk status validation ... ok
+test_compliance_snapshot_structure (__main__.TestDatabaseOperations)
+Test compliance snapshot data structure ... ok
+test_control_record_structure (__main__.TestDatabaseOperations)
+Test control record structure ... ok
+test_risk_register_structure (__main__.TestDatabaseOperations)
+Test risk register data structure ... ok
+test_framework_control_count (__main__.TestComplianceFrameworks)
+Test framework control count ... ok
+test_framework_version_format (__main__.TestComplianceFrameworks)
+Test framework version format ... ok
+test_audit_log_action_types (__main__.TestAuditLogging)
+Test audit log action types ... ok
+test_audit_log_entity_types (__main__.TestAuditLogging)
+Test audit log entity types ... ok
+test_audit_log_entry_structure (__main__.TestAuditLogging)
+Test audit log entry structure ... ok
+test_compliance_report_content (__main__.TestReportGeneration)
+Test compliance report contains required content ... ok
+test_risk_report_content (__main__.TestReportGeneration)
+Test risk report contains required content ... ok
+test_compliance_to_risk_workflow (__main__.TestIntegration)
+Test workflow from compliance check to risk assessment ... ok
+test_control_to_audit_workflow (__main__.TestIntegration)
+Test workflow from control implementation to audit logging ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.001s
+
+OK
