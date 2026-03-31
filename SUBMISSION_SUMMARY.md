@@ -24,3 +24,13 @@
 | RDS Snapshot |  Available | manual backup |
 
 ## Validation Results 
+Ran 22 tests in 0.028s
+OK
+
+
+## Compliance Requirements
+- [x] $10 billing alert configured
+- [x] All services within AWS Free Tier limits
+- [x] Evidence screenshots captured in `evidence/` folder
+
+
