@@ -80,3 +80,34 @@ $ python3 test_cases.py
 Ran 22 tests in 0.028s
 OK
 CloudWatch + CloudTrail + EventBridge + AWS Config ✓
+
+
+
+Test Categories Validated
+Category
+Tests
+Purpose
+Compliance Monitoring
+3
+Validate compliance percentage calculation, report generation, non-compliant rule detection
+Risk Assessment
+3
+Verify risk level classification, matrix scoring, risk score calculation
+Data Validation
+4
+Confirm asset classification, control ID format, criticality level, risk status validation
+Database Operations
+3
+Test compliance snapshot, control record, risk register data structures
+Framework Mapping
+2
+Validate framework control count and version format
+Audit Logging
+3
+Verify audit log action types, entity types, entry structure
+Report Generation
+2
+Test compliance and risk report content requirements
+Integration Workflows
+2
+Validate compliance-to-risk and control-to-audit end-to-end logic
