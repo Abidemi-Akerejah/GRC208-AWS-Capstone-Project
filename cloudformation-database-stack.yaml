@@ -13,11 +13,13 @@ Parameters:
     Description: Database name
   
   DBUsername:
+    Default: grcadmin
     Type: String
     NoEcho: true
     Description: Database master username
   
   DBPassword:
+    Default: MyPassword123
     Type: String
     NoEcho: true
     Description: Database master password
