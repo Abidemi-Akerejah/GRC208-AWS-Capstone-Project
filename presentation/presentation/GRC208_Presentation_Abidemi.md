@@ -54,16 +54,16 @@ S3 Buckets (evidence, reports, config, cloudtrail-logs) ✓
 
 | Component | Resource Name | Status | Verification Command |
 |-----------|--------------|--------|---------------------|
-| **Network Stack** | `grc-capstone-network-stack` | ✅ `CREATE_COMPLETE` | `aws cloudformation describe-stacks --stack-name grc-capstone-network-stack` |
-| **RDS Database** | `grc-capstone-db` | ✅ `available` | `aws rds describe-db-instances --db-instance-identifier grc-capstone-db --query "DBInstances[0].DBInstanceStatus"` |
-| **S3 Buckets** | 4 buckets with `grc-*` prefix | ✅ Created | `aws s3 ls \| grep grc-` |
-| **DynamoDB Tables** | `grc-capstone-controls`, `grc-capstone-risk`, `grc-capstone-compliance` | ✅ Created | `aws dynamodb list-tables --query "TableNames[?contains(@, 'grc-capstone')]"` |
-| **Lambda Function** | `grc-compliance-monitor` | ✅ `Active` | `aws lambda get-function --function-name grc-compliance-monitor --query "Configuration.State"` |
-| **CloudWatch Alarms** | `grc-lambda-errors`, `grc-rds-high-cpu`, `grc-capstone-billing-alert-10` | ✅ Active | `aws cloudwatch describe-alarms --query "MetricAlarms[?contains(AlarmName, 'grc-')].AlarmName"` |
-| **CloudTrail** | `grc-trail` | ✅ Logging: `true` | `aws cloudtrail describe-trails --query "trailList[0].{Name:Name,Logging:IsLogging}"` |
-| **EventBridge Rule** | `grc-compliance-check` | ✅ `ENABLED`, `rate(1 hour)` | `aws events describe-rule --name grc-compliance-check --query "{Name:Name,State:State}"` |
-| **RDS Snapshot** | `grc-capstone-snapshot-YYYYMMDD` | ✅ `available` | `aws rds describe-db-snapshots --snapshot-type manual --query "DBSnapshots[0].{ID:DBSnapshotIdentifier,Status:Status}"` |
-| **AWS Config** | `default` recorder | ✅ Enabled, resources discovering | `aws configservice describe-configuration-recorder-status --query "ConfigurationRecordersStatus[0].{Recording:recording,LastStatus:lastStatus}"` |
+| **Network Stack** | `grc-capstone-network-stack` |  `CREATE_COMPLETE` | `aws cloudformation describe-stacks --stack-name grc-capstone-network-stack` |
+| **RDS Database** | `grc-capstone-db` | ] `available` | `aws rds describe-db-instances --db-instance-identifier grc-capstone-db --query "DBInstances[0].DBInstanceStatus"` |
+| **S3 Buckets** | 4 buckets with `grc-*` prefix | ] Created | `aws s3 ls \| grep grc-` |
+| **DynamoDB Tables** | `grc-capstone-controls`, `grc-capstone-risk`, `grc-capstone-compliance` | ] Created | `aws dynamodb list-tables --query "TableNames[?contains(@, 'grc-capstone')]"` |
+| **Lambda Function** | `grc-compliance-monitor` | ] `Active` | `aws lambda get-function --function-name grc-compliance-monitor --query "Configuration.State"` |
+| **CloudWatch Alarms** | `grc-lambda-errors`, `grc-rds-high-cpu`, `grc-capstone-billing-alert-10` |  Active | `aws cloudwatch describe-alarms --query "MetricAlarms[?contains(AlarmName, 'grc-')].AlarmName"` |
+| **CloudTrail** | `grc-trail` |  Logging: `true` | `aws cloudtrail describe-trails --query "trailList[0].{Name:Name,Logging:IsLogging}"` |
+| **EventBridge Rule** | `grc-compliance-check` |  `ENABLED`, `rate(1 hour)` | `aws events describe-rule --name grc-compliance-check --query "{Name:Name,State:State}"` |
+| **RDS Snapshot** | `grc-capstone-snapshot-YYYYMMDD` |  `available` | `aws rds describe-db-snapshots --snapshot-type manual --query "DBSnapshots[0].{ID:DBSnapshotIdentifier,Status:Status}"` |
+| **AWS Config** | `default` recorder |  Enabled, resources discovering | `aws configservice describe-configuration-recorder-status --query "ConfigurationRecordersStatus[0].{Recording:recording,LastStatus:lastStatus}"` |
 
 ### Configuration Management
 
@@ -73,7 +73,7 @@ S3 Buckets (evidence, reports, config, cloudtrail-logs) ✓
 
 ---
 
-## ✅ Validation Results: 22/22 Tests PASSED
+## Validation Results: 22/22 Tests PASSED
 
 ```bash
 $ python3 test_cases.py
@@ -81,33 +81,17 @@ Ran 22 tests in 0.028s
 OK
 CloudWatch + CloudTrail + EventBridge + AWS Config ✓
 
+**Test Categories Validated
+**
 
+Category	Tests	Purpose
+Compliance Monitoring	3	Validate compliance percentage calculation, report generation, non-compliant rule detection
+Risk Assessment	3	Verify risk level classification, matrix scoring, risk score calculation
+Data Validation	4	Confirm asset classification, control ID format, criticality level, risk status validation
+Database Operations	3	Test compliance snapshot, control record, risk register data structures
+Framework Mapping	2	Validate framework control count and version format
+Audit Logging	3	Verify audit log action types, entity types, entry structure
+Report Generation	2	Test compliance and risk report content requirements
+Integration Workflows	2	Validate compliance-to-risk and control-to-audit end-to-end logic
+<img width="1199" height="235" alt="image" src="https://github.com/user-attachments/assets/61abb840-0385-4933-a669-3ded7fcde587" />
 
-Test Categories Validated
-Category
-Tests
-Purpose
-Compliance Monitoring
-3
-Validate compliance percentage calculation, report generation, non-compliant rule detection
-Risk Assessment
-3
-Verify risk level classification, matrix scoring, risk score calculation
-Data Validation
-4
-Confirm asset classification, control ID format, criticality level, risk status validation
-Database Operations
-3
-Test compliance snapshot, control record, risk register data structures
-Framework Mapping
-2
-Validate framework control count and version format
-Audit Logging
-3
-Verify audit log action types, entity types, entry structure
-Report Generation
-2
-Test compliance and risk report content requirements
-Integration Workflows
-2
-Validate compliance-to-risk and control-to-audit end-to-end logic
