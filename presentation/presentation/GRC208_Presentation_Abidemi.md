@@ -19,3 +19,64 @@
 A cloud-based GRC (Governance, Risk, Compliance) platform deployed on AWS that automates compliance monitoring, risk assessment, and audit logging using native AWS services.
 
 ### Deployment Status: COMPLETE
+
+---
+
+## System Architecture
+Internet
+↓
+[Public Subnet]
+↓
+Application Load Balancer → Lambda (grc-compliance-monitor)
+↓
+[Private Subnet]
+↓
+RDS MySQL (grc-capstone-db) ✓ available
+↓
+S3 Buckets (evidence, reports, config, cloudtrail-logs) ✓
+
+
+### Key Design Principles
+
+| Principle | Implementation |
+|-----------|---------------|
+| 🔐 Security | Private subnets for RDS, least-privilege IAM roles |
+| ⚡ Scalability | Serverless Lambda functions, PAY_PER_REQUEST DynamoDB |
+| 📝 Auditability | CloudTrail logs all API calls to S3 |
+| 🤖 Automation | EventBridge triggers hourly compliance checks |
+| 💾 Recovery | RDS manual snapshots + S3 versioning |
+
+---
+
+## 📦 Deployed Infrastructure
+
+### Core Components (All Verified via AWS CLI)
+
+| Component | Resource Name | Status | Verification Command |
+|-----------|--------------|--------|---------------------|
+| **Network Stack** | `grc-capstone-network-stack` | ✅ `CREATE_COMPLETE` | `aws cloudformation describe-stacks --stack-name grc-capstone-network-stack` |
+| **RDS Database** | `grc-capstone-db` | ✅ `available` | `aws rds describe-db-instances --db-instance-identifier grc-capstone-db --query "DBInstances[0].DBInstanceStatus"` |
+| **S3 Buckets** | 4 buckets with `grc-*` prefix | ✅ Created | `aws s3 ls \| grep grc-` |
+| **DynamoDB Tables** | `grc-capstone-controls`, `grc-capstone-risk`, `grc-capstone-compliance` | ✅ Created | `aws dynamodb list-tables --query "TableNames[?contains(@, 'grc-capstone')]"` |
+| **Lambda Function** | `grc-compliance-monitor` | ✅ `Active` | `aws lambda get-function --function-name grc-compliance-monitor --query "Configuration.State"` |
+| **CloudWatch Alarms** | `grc-lambda-errors`, `grc-rds-high-cpu`, `grc-capstone-billing-alert-10` | ✅ Active | `aws cloudwatch describe-alarms --query "MetricAlarms[?contains(AlarmName, 'grc-')].AlarmName"` |
+| **CloudTrail** | `grc-trail` | ✅ Logging: `true` | `aws cloudtrail describe-trails --query "trailList[0].{Name:Name,Logging:IsLogging}"` |
+| **EventBridge Rule** | `grc-compliance-check` | ✅ `ENABLED`, `rate(1 hour)` | `aws events describe-rule --name grc-compliance-check --query "{Name:Name,State:State}"` |
+| **RDS Snapshot** | `grc-capstone-snapshot-YYYYMMDD` | ✅ `available` | `aws rds describe-db-snapshots --snapshot-type manual --query "DBSnapshots[0].{ID:DBSnapshotIdentifier,Status:Status}"` |
+| **AWS Config** | `default` recorder | ✅ Enabled, resources discovering | `aws configservice describe-configuration-recorder-status --query "ConfigurationRecordersStatus[0].{Recording:recording,LastStatus:lastStatus}"` |
+
+### Configuration Management
+
+- `.env` file with 12 environment variables (force-added to Git for submission)
+- All CLI commands documented in `evidence/` folder
+- Infrastructure as Code via CloudFormation (network stack) + manual deployment (database stack)
+
+---
+
+## ✅ Validation Results: 22/22 Tests PASSED
+
+```bash
+$ python3 test_cases.py
+Ran 22 tests in 0.028s
+OK
+CloudWatch + CloudTrail + EventBridge + AWS Config ✓
