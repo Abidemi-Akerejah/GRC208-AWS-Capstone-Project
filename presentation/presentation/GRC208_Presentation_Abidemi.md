@@ -48,7 +48,7 @@ S3 Buckets (evidence, reports, config, cloudtrail-logs) ✓
 
 ---
 
-## 📦 Deployed Infrastructure
+## Deployed Infrastructure
 
 ### Core Components (All Verified via AWS CLI)
 
@@ -99,5 +99,3 @@ Verify audit log action types, entity types, entry structure
 Test compliance and risk report content requirements
 • Integration Workflows (2 tests):
 Validate compliance-to-risk and control-to-audit end-to-end logic
-
-Note: Tests use mocked database connections per capstone design. This validates code logic independently of live data.
