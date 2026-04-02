@@ -44,4 +44,4 @@ Evidence can be found in the evidence folder
 - Consider Blue/Green deployments for minimal downtime
 - Budget for Extended Support only if business requirements delay upgrade
 
-This demonstrates proactive lifecycle governance — a core GRC competency.
+This demonstrates proactive lifecycle governance, a core GRC competency.
