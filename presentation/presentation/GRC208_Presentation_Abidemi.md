@@ -73,37 +73,23 @@ S3 Buckets (evidence, reports, config, cloudtrail-logs) ✓
 
 ---
 
-## Validation Results: 22/22 Tests PASSED
-
-```bash
-$ python3 test_cases.py
-Ran 22 tests in 0.028s
-OK
-CloudWatch + CloudTrail + EventBridge + AWS Config ✓
+Validation Results: 22/22 Tests PASSED
 
 $ python3 test_cases.py
 Ran 22 tests in 0.028s
 OK
+
+Services Verified:
 CloudWatch + CloudTrail + EventBridge + AWS Config ✓
 
-Test Categories Validated
+Test Categories Validated:
+• Compliance Monitoring (3 tests): Validate compliance percentage calculation, report generation, non-compliant rule detection
+• Risk Assessment (3 tests): Verify risk level classification, matrix scoring, risk score calculation
+• Data Validation (4 tests): Confirm asset classification, control ID format, criticality level, risk status validation
+• Database Operations (3 tests): Test compliance snapshot, control record, risk register data structures
+• Framework Mapping (2 tests): Validate framework control count and version format
+• Audit Logging (3 tests): Verify audit log action types, entity types, entry structure
+• Report Generation (2 tests): Test compliance and risk report content requirements
+• Integration Workflows (2 tests): Validate compliance-to-risk and control-to-audit end-to-end logic
 
-Category	Tests	Purpose
-Compliance Monitoring	3
-Validate compliance percentage calculation, report generation, non-compliant rule detection
-Risk Assessment	3
-Verify risk level classification, matrix scoring, risk score calculation
-Data Validation	4
-Confirm asset classification, control ID format, criticality level, risk status validation
-Database Operations	3
-Test compliance snapshot, control record, risk register data structures
-Framework Mapping	2
-Validate framework control count and version format
-Audit Logging	3
-Verify audit log action types, entity types, entry structure
-Report Generation	2
-Test compliance and risk report content requirements
-Integration Workflows	2
-Validate compliance-to-risk and control-to-audit end-to-end logic
-
-
+Note: Tests use mocked database connections per capstone design. This validates code logic independently of live data.
