@@ -86,8 +86,7 @@ Ran 22 tests in 0.028s
 OK
 CloudWatch + CloudTrail + EventBridge + AWS Config ✓
 
-**Test Categories Validated
-**
+Test Categories Validated
 
 Category	Tests	Purpose
 Compliance Monitoring	3
@@ -106,6 +105,5 @@ Report Generation	2
 Test compliance and risk report content requirements
 Integration Workflows	2
 Validate compliance-to-risk and control-to-audit end-to-end logic
-
 
 
