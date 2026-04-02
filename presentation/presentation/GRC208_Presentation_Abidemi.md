@@ -81,6 +81,11 @@ Ran 22 tests in 0.028s
 OK
 CloudWatch + CloudTrail + EventBridge + AWS Config ✓
 
+$ python3 test_cases.py
+Ran 22 tests in 0.028s
+OK
+CloudWatch + CloudTrail + EventBridge + AWS Config ✓
+
 **Test Categories Validated
 **
 
@@ -101,4 +106,6 @@ Report Generation	2
 Test compliance and risk report content requirements
 Integration Workflows	2
 Validate compliance-to-risk and control-to-audit end-to-end logic
+
+
 
