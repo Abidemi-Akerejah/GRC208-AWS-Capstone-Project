@@ -26,21 +26,28 @@ A cloud-based GRC (Governance, Risk, Compliance) platform deployed on AWS that a
 Internet
 ↓
 
+
 [Public Subnet]
 ↓
+
 
 Application Load Balancer → Lambda (grc-compliance-monitor)
 ↓
 
+
 [Private Subnet]
 ↓
+
+
 
 RDS MySQL (grc-capstone-db) ✓ available
 ↓
 
+
 S3 Buckets (evidence, reports, config, cloudtrail-logs) ✓
 
 ↓
+
 CloudWatch + CloudTrail + EventBridge + AWS Config ✓
 
 
