@@ -77,7 +77,7 @@ CloudWatch + CloudTrail + EventBridge + AWS Config ✓
 | **CloudWatch Alarms** | `grc-lambda-errors`, `grc-rds-high-cpu`, `grc-capstone-billing-alert-10` |  Active | `aws cloudwatch describe-alarms --query "MetricAlarms[?contains(AlarmName, 'grc-')].AlarmName"` |
 | **CloudTrail** | `grc-trail` |  Logging: `true` | `aws cloudtrail describe-trails --query "trailList[0].{Name:Name,Logging:IsLogging}"` |
 | **EventBridge Rule** | `grc-compliance-check` |  `ENABLED`, `rate(1 hour)` | `aws events describe-rule --name grc-compliance-check --query "{Name:Name,State:State}"` |
-| **RDS Snapshot** | `grc-capstone-snapshot-YYYYMMDD` |  `available` | `aws rds describe-db-snapshots --snapshot-type manual --query "DBSnapshots[0].{ID:DBSnapshotIdentifier,Status:Status}"` |
+| **RDS Snapshot** | `grc-capstone-snapshot` |  `available` | `aws rds describe-db-snapshots --snapshot-type manual --query "DBSnapshots[0].{ID:DBSnapshotIdentifier,Status:Status}"` |
 | **AWS Config** | `default` recorder |  Enabled, resources discovering | `aws configservice describe-configuration-recorder-status --query "ConfigurationRecordersStatus[0].{Recording:recording,LastStatus:lastStatus}"` |
 
 ### Configuration Management
