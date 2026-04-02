@@ -29,9 +29,9 @@ OK
 
 
 ## Compliance Requirements
-- [x] $10 billing alert configured
-- [x] All services within AWS Free Tier limits
-- [x] Evidence screenshots captured in `evidence/` folder
+$10 billing alert configured
+All services within AWS Free Tier limits
+Evidence screenshots captured in `evidence/` folder
 
 ### Lifecycle Management Note
 
